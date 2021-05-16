@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3sZ-Ib-Qni">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Inventory-->
+        <scene sceneID="lfl-gn-ggx">
+            <objects>
+                <viewController title="My Inventory" id="3sZ-Ib-Qni" customClass="MyInventoryViewController" customModule="XPIRE" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Eae-rm-ng3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zCN-eR-xjr">
+                                <rect key="frame" x="0.0" y="88" width="414" height="648"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.55686274509803924" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="separatorColor" red="0.96045006649999998" green="0.96045006649999998" blue="0.96045006649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyItemTableViewCell" rowHeight="69" id="ryt-yb-eCc" customClass="MyItemTableViewCell" customModule="XPIRE" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="69"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ryt-yb-eCc" id="GK4-R0-kZe">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="69"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xda-7e-qZR">
+                                                    <rect key="frame" x="15" y="0.0" width="384" height="34"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="34" id="5Hx-B9-5LK"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Purchased:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aGP-cB-hxr">
+                                                    <rect key="frame" x="15" y="40" width="160" height="22"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <color key="textColor" red="0.96045006649999998" green="0.96045006649999998" blue="0.96045006649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expiring:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nsy-qM-PtX">
+                                                    <rect key="frame" x="251" y="42" width="143" height="18"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="143" id="4Zf-St-kPc"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <color key="textColor" red="0.96045006649999998" green="0.96045006649999998" blue="0.96045006649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Nsy-qM-PtX" secondAttribute="bottom" constant="9" id="3Ul-YU-gYe"/>
+                                                <constraint firstItem="Nsy-qM-PtX" firstAttribute="leading" secondItem="aGP-cB-hxr" secondAttribute="trailing" constant="76" id="53a-th-E5W"/>
+                                                <constraint firstItem="xda-7e-qZR" firstAttribute="top" secondItem="GK4-R0-kZe" secondAttribute="top" id="Bk0-y6-CzS"/>
+                                                <constraint firstItem="xda-7e-qZR" firstAttribute="leading" secondItem="GK4-R0-kZe" secondAttribute="leading" constant="15" id="Djs-tR-b6K"/>
+                                                <constraint firstItem="Nsy-qM-PtX" firstAttribute="top" secondItem="xda-7e-qZR" secondAttribute="bottom" constant="8" symbolic="YES" id="OQi-Vs-COn"/>
+                                                <constraint firstAttribute="bottom" secondItem="aGP-cB-hxr" secondAttribute="bottom" constant="7" id="XNY-3B-1t6"/>
+                                                <constraint firstAttribute="trailing" secondItem="Nsy-qM-PtX" secondAttribute="trailing" constant="20" symbolic="YES" id="juR-dY-J0a"/>
+                                                <constraint firstAttribute="trailing" secondItem="xda-7e-qZR" secondAttribute="trailing" constant="15" id="oJh-be-eYB"/>
+                                                <constraint firstItem="aGP-cB-hxr" firstAttribute="centerY" secondItem="Nsy-qM-PtX" secondAttribute="centerY" id="rpI-hq-Flo"/>
+                                                <constraint firstItem="aGP-cB-hxr" firstAttribute="leading" secondItem="GK4-R0-kZe" secondAttribute="leading" constant="15" id="yJZ-Od-yq5"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.20000000000000001" green="0.55686274509803924" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="expiringDate" destination="Nsy-qM-PtX" id="Wkc-V2-zEu"/>
+                                            <outlet property="nameLabel" destination="xda-7e-qZR" id="D1C-X0-hZu"/>
+                                            <outlet property="purchasedDate" destination="aGP-cB-hxr" id="ula-zu-6sw"/>
+                                            <segue destination="1j2-1Z-EL9" kind="show" identifier="MyInventoryDetails" id="qHg-Or-Wmy"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="3sZ-Ib-Qni" id="eq7-aK-elV"/>
+                                    <outlet property="delegate" destination="3sZ-Ib-Qni" id="mlj-pg-aE4"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7og-jr-jBM">
+                                <rect key="frame" x="20" y="748" width="374" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration" label="Add More Items"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="bUq-O0-71r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <state key="normal" title="Add More Items">
+                                    <color key="titleColor" red="0.35686274509999999" green="0.71372549019999998" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="uX6-hA-rUp" kind="show" id="MO3-i6-afQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tAJ-cy-DbE"/>
+                        <color key="backgroundColor" red="0.20000000000000001" green="0.55686274509803924" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="zCN-eR-xjr" firstAttribute="trailing" secondItem="tAJ-cy-DbE" secondAttribute="trailing" id="Jkh-g2-XmV"/>
+                            <constraint firstItem="tAJ-cy-DbE" firstAttribute="trailing" secondItem="7og-jr-jBM" secondAttribute="trailing" constant="20" id="OdD-W1-LAm"/>
+                            <constraint firstItem="7og-jr-jBM" firstAttribute="top" secondItem="zCN-eR-xjr" secondAttribute="bottom" constant="12" id="brj-j7-59B"/>
+                            <constraint firstItem="zCN-eR-xjr" firstAttribute="top" secondItem="tAJ-cy-DbE" secondAttribute="top" id="mHv-vr-8Ki"/>
+                            <constraint firstItem="7og-jr-jBM" firstAttribute="bottom" secondItem="tAJ-cy-DbE" secondAttribute="bottom" constant="-20" id="sWp-Kr-roQ"/>
+                            <constraint firstItem="zCN-eR-xjr" firstAttribute="leading" secondItem="tAJ-cy-DbE" secondAttribute="leading" id="tIs-YB-xTN"/>
+                            <constraint firstItem="7og-jr-jBM" firstAttribute="leading" secondItem="tAJ-cy-DbE" secondAttribute="leading" constant="20" id="xBi-tq-tVF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="MY INVENTORY" id="bGn-SZ-skU">
+                        <barButtonItem key="leftBarButtonItem" title="Sort By" id="QAe-l6-PNa">
+                            <connections>
+                                <action selector="didPressSort:" destination="3sZ-Ib-Qni" id="uMJ-QW-waV"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="rcr-wE-7UG">
+                            <connections>
+                                <action selector="didTapEdit" destination="3sZ-Ib-Qni" id="PDA-eo-ZeA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <connections>
+                        <outlet property="addMoreItemsButton" destination="7og-jr-jBM" id="44U-fy-DRi"/>
+                        <outlet property="inventoryTableView" destination="zCN-eR-xjr" id="tls-8F-ou3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9x1-fb-vfG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1776.8115942028987" y="227.67857142857142"/>
+        </scene>
+        <!--MyInventoryDetails-->
+        <scene sceneID="ZlU-1m-3wV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MyInventoryDetails" id="1j2-1Z-EL9" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="jbh-bJ-k6l"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A8I-uU-tYh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2580" y="163"/>
+        </scene>
+        <!--AddItem-->
+        <scene sceneID="Ijd-ay-JGk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddItem" id="uX6-hA-rUp" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="OQB-L6-72t"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ktW-7n-GVl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2475" y="497"/>
+        </scene>
+    </scenes>
+</document>
