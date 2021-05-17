@@ -1,5 +1,7 @@
 # CSE439-Project - Food Waste Tracking App - XPIRE
 
+[See on the App Store](https://apps.apple.com/us/app/xpire/id1554990479)
+
 ![XPIRE APP](https://nurzhankanatzhanov.github.io/portfolio/images/motto.png)
 
 ## Team Members:
